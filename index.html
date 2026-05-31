@@ -972,6 +972,156 @@
       .team-card { width: 100%; }
     }
 
+
+    /* ─── REVENUE GRID ──────────────────────────────── */
+    .revenue-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 56px;
+    }
+    @media (max-width: 768px) { .revenue-grid { grid-template-columns: 1fr; } }
+    .revenue-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      transition: all 0.35s;
+    }
+    .revenue-card:hover { border-color: rgba(0,230,118,0.3); transform: translateY(-4px); }
+    .revenue-card.primary {
+      background: linear-gradient(135deg, rgba(0,230,118,0.08), rgba(0,191,165,0.03));
+      border-color: rgba(0,230,118,0.2);
+    }
+    .rev-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+    .rev-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+      background: rgba(0,230,118,0.1);
+      color: var(--green);
+      border: 1px solid rgba(0,230,118,0.2);
+    }
+    .rev-badge.orange { background: rgba(255,109,0,0.1); color: var(--orange); border-color: rgba(255,109,0,0.2); }
+    .rev-badge.purple { background: rgba(179,136,255,0.1); color: #B388FF; border-color: rgba(179,136,255,0.2); }
+    .rev-badge.grey { background: rgba(255,255,255,0.06); color: var(--muted); border-color: var(--border); }
+    .revenue-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .revenue-card p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+    .rev-numbers { display: flex; gap: 32px; flex-wrap: wrap; }
+    .rev-num-item { display: flex; flex-direction: column; gap: 4px; }
+    .rev-num { font-size: 22px; font-weight: 800; color: var(--green); letter-spacing: -0.02em; }
+    .rev-num-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ─── TOURNAMENT ENGINE ─────────────────────────── */
+    .tournament-engine {
+      background: var(--bg2);
+      border-radius: 24px;
+      padding: 56px 48px;
+      border: 1px solid var(--border);
+      margin-top: 80px;
+    }
+    @media (max-width: 768px) { .tournament-engine { padding: 36px 24px; } }
+    .te-audiences {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    @media (max-width: 1100px) { .te-audiences { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .te-audiences { grid-template-columns: 1fr; } }
+    .te-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: all 0.3s;
+    }
+    .te-card:hover { border-color: rgba(0,230,118,0.25); transform: translateY(-4px); }
+    .te-card h4 { font-size: 16px; font-weight: 700; margin: 12px 0 8px; }
+    .te-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    @media (max-width: 1100px) { .phases-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 580px) { .phases-grid { grid-template-columns: 1fr; } }
+    .phase-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: all 0.3s;
+    }
+    .phase-card.active-phase {
+      background: linear-gradient(135deg, rgba(0,230,118,0.1), rgba(0,191,165,0.04));
+      border-color: rgba(0,230,118,0.3);
+    }
+    .phase-card:hover { transform: translateY(-4px); }
+    .phase-num { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .phase-name { font-size: 18px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.01em; }
+    .phase-metric { font-size: 11px; font-weight: 600; color: var(--green); margin-bottom: 12px; background: rgba(0,230,118,0.08); padding: 4px 10px; border-radius: 100px; display: inline-block; }
+    .phase-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+    .phase-tag { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 0.06em; }
+    .phase-tag.green { color: var(--green); }
+
+    /* ─── TRACTION BANNER ───────────────────────────── */
+    .traction-banner {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 40px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 768px) { .traction-banner { padding: 28px 20px; } }
+    .traction-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); text-transform: uppercase; margin-bottom: 32px; }
+    .traction-steps { display: flex; align-items: flex-start; gap: 0; flex-wrap: wrap; }
+    .traction-step { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 100px; position: relative; padding-bottom: 4px; }
+    .traction-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: calc(50% + 12px);
+      right: calc(-50% + 12px);
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+    .traction-step.ts-done:not(:last-child)::after { background: var(--green); }
+    .ts-dot { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--border); background: var(--bg); z-index: 1; margin-bottom: 12px; flex-shrink: 0; }
+    .ts-dot.done { background: var(--green); border-color: var(--green); }
+    .ts-dot.active { background: transparent; border-color: var(--green); box-shadow: 0 0 0 5px rgba(0,230,118,0.15); animation: pulse 2s infinite; }
+    .ts-text { font-size: 12px; font-weight: 600; text-align: center; margin-bottom: 4px; line-height: 1.3; }
+    .ts-date { font-size: 11px; color: var(--muted); text-align: center; }
+
+    /* ─── PROJECTIONS ───────────────────────────────── */
+    .projections-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; }
+    .proj-rows { display: flex; flex-direction: column; gap: 20px; }
+    .proj-row { display: grid; grid-template-columns: 1.2fr 2fr 80px; gap: 16px; align-items: center; }
+    @media (max-width: 480px) { .proj-row { grid-template-columns: 1fr; gap: 6px; } }
+    .proj-label { font-size: 13px; font-weight: 600; }
+    .proj-bar-wrap { background: rgba(255,255,255,0.05); border-radius: 100px; height: 8px; overflow: hidden; }
+    .proj-bar { height: 100%; border-radius: 100px; background: var(--green); }
+    .proj-bar.orange { background: var(--orange); }
+    .proj-value { font-size: 13px; font-weight: 700; color: var(--green); white-space: nowrap; text-align: right; }
+
+    /* ─── USE OF FUNDS ──────────────────────────────── */
+    .use-of-funds { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; margin-top: 20px; }
+    .fund-rows { display: flex; flex-direction: column; gap: 16px; }
+    .fund-row { display: grid; grid-template-columns: 1.5fr 2fr 40px; gap: 16px; align-items: center; }
+    @media (max-width: 480px) { .fund-row { grid-template-columns: 1fr; gap: 6px; } }
+    .fund-label { font-size: 13px; font-weight: 600; }
+    .fund-bar-wrap { background: rgba(255,255,255,0.05); border-radius: 100px; height: 8px; overflow: hidden; }
+    .fund-bar { height: 100%; border-radius: 100px; background: var(--green); }
+    .fund-bar.orange { background: var(--orange); }
+    .fund-pct { font-size: 13px; font-weight: 700; color: var(--muted); text-align: right; }
+
     /* ─── CURSOR GLOW ──────────────────────────────────── */
     .cursor-glow {
       pointer-events: none;
@@ -1004,7 +1154,8 @@
   <ul class="nav-links">
     <li><a href="#mission">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#investor">Investors</a></li>
+    <li><a href="#business-model">Business Plan</a></li>
+    <li><a href="#investor">Invest</a></li>
     <li><a href="#team">Team</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1016,7 +1167,8 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#mission"  onclick="closeMenu()">About</a>
   <a href="#services" onclick="closeMenu()">Services</a>
-  <a href="#investor" onclick="closeMenu()">Investors</a>
+  <a href="#business-model" onclick="closeMenu()">Business Plan</a>
+  <a href="#investor" onclick="closeMenu()">Invest</a>
   <a href="#team"     onclick="closeMenu()">Team</a>
   <a href="#contact"  onclick="closeMenu()">Contact</a>
 </div>
@@ -1033,7 +1185,7 @@
   <div class="hero-content">
     <div class="hero-badge">
       <span class="badge-dot"></span>
-      Launching Soon · Pre-Product
+      Launching June 2026 · 5 Grounds Committed
     </div>
 
     <h1 class="hero-title">
@@ -1052,16 +1204,16 @@
 
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">100M<span style="font-size:20px;font-weight:600;color:rgba(0,230,118,0.6)">+</span></div>
-        <div class="stat-label">Recreational Athletes in India</div>
+        <div class="stat-num">20<span style="font-size:20px;font-weight:600;color:rgba(0,230,118,0.6)">+</span></div>
+        <div class="stat-label">Venues at Launch</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">95–97<span style="font-size:20px;font-weight:600;color:rgba(0,230,118,0.6)">%</span></div>
-        <div class="stat-label">Payout to Venue Partners</div>
+        <div class="stat-label">Payout to Partners</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">25M<span style="font-size:20px;font-weight:600;color:rgba(0,230,118,0.6)">+</span></div>
-        <div class="stat-label">NCR Market Reach</div>
+        <div class="stat-num">₹25K<span style="font-size:20px;font-weight:600;color:rgba(0,230,118,0.6)">Cr+</span></div>
+        <div class="stat-label">Addressable Market</div>
       </div>
     </div>
   </div>
@@ -1195,14 +1347,189 @@
   </div>
 </section>
 
+<!-- ─── BUSINESS MODEL ─── -->
+<section id="business-model" style="background:var(--bg);">
+  <div class="reveal" style="margin-bottom:56px">
+    <div class="section-tag">Business Plan</div>
+    <h2 class="section-title">How GameOn<br/>Makes Money</h2>
+    <p class="section-sub">Multiple revenue streams from day one — with tournaments scaling into our dominant income engine at 20–30 grounds.</p>
+  </div>
+
+  <div class="revenue-grid reveal">
+    <div class="revenue-card primary">
+      <span class="rev-icon">💳</span>
+      <span class="rev-badge">Primary · Active at Launch</span>
+      <h3>Booking Platform Commission</h3>
+      <p>GameOn charges a 3–5% platform fee on every booking made through our app. The venue keeps 95–97%. With 20 venues at launch each averaging 8–10 bookings a day, this generates meaningful revenue from week one — and scales linearly with every new ground added.</p>
+      <div class="rev-numbers">
+        <div class="rev-num-item">
+          <span class="rev-num">₹500–₹3K</span>
+          <span class="rev-num-label">Avg booking value</span>
+        </div>
+        <div class="rev-num-item">
+          <span class="rev-num">3–5%</span>
+          <span class="rev-num-label">Platform fee</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="revenue-card">
+      <span class="rev-icon">🏆</span>
+      <span class="rev-badge orange">Secondary · Scales at 20–30 Grounds</span>
+      <h3>Tournament Revenue</h3>
+      <p>When we reach 20–30 ground partners, we automate the full tournament workflow — scheduling, draws, scoring, results — and run 2–4 tournaments per month across academy kids, corporate teams, and competitive players. We retain 20–30% of total entry pool.</p>
+      <div class="rev-numbers">
+        <div class="rev-num-item">
+          <span class="rev-num">2–4</span>
+          <span class="rev-num-label">Tournaments/month</span>
+        </div>
+        <div class="rev-num-item">
+          <span class="rev-num">20–30%</span>
+          <span class="rev-num-label">Revenue share</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="revenue-card">
+      <span class="rev-icon">🏢</span>
+      <span class="rev-badge purple">Corporate Packages</span>
+      <h3>Corporate Sports Programs</h3>
+      <p>End-to-end corporate tournament packages — venue, logistics, scoring, trophies. Bundled as quarterly programs for companies. High-margin, recurring revenue with low acquisition cost per participant and strong potential for annual contracts.</p>
+      <div class="rev-numbers">
+        <div class="rev-num-item">
+          <span class="rev-num">₹50K–₹2L</span>
+          <span class="rev-num-label">Per corporate event</span>
+        </div>
+        <div class="rev-num-item">
+          <span class="rev-num">High</span>
+          <span class="rev-num-label">Gross margin</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="revenue-card">
+      <span class="rev-icon">🏫</span>
+      <span class="rev-badge grey">Future · School Grounds Program</span>
+      <h3>School Ground Monetisation</h3>
+      <p>Partner with school grounds to unlock their fields post-school hours. Schools earn new revenue. GameOn lists them at zero capex. Potentially thousands of new venues across every Indian city — a supply moat no competitor can easily replicate.</p>
+      <div class="rev-numbers">
+        <div class="rev-num-item">
+          <span class="rev-num">Zero</span>
+          <span class="rev-num-label">Capex for venues</span>
+        </div>
+        <div class="rev-num-item">
+          <span class="rev-num">∞</span>
+          <span class="rev-num-label">Supply unlock</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tournament Engine -->
+  <div class="tournament-engine reveal">
+    <div class="section-tag">Tournament Engine</div>
+    <h3 style="font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px">Tournaments: Our <span style="color:var(--green)">Long Game</span></h3>
+    <p style="color:var(--muted);font-size:16px;max-width:660px;line-height:1.7">When we have 20–30 grounds on board, we automate the entire tournament workflow. This is where GameOn becomes the operating system for recreational sports competition in India — four distinct audiences, all underserved.</p>
+
+    <div class="te-audiences">
+      <div class="te-card">
+        <span style="font-size:36px">🎓</span>
+        <h4>Academy Kids</h4>
+        <p>Structured competitions for kids in sports academies — cricket, football, badminton. Regular, recurring, year-round. Parents pay willingly for structured competition that complements training.</p>
+      </div>
+      <div class="te-card">
+        <span style="font-size:36px">💼</span>
+        <h4>Corporate Professionals</h4>
+        <p>Competitive and fun leagues for working professionals. Corporate vs corporate, inter-department formats. High willingness to pay, strong brand sponsorship potential, annual recurring.</p>
+      </div>
+      <div class="te-card">
+        <span style="font-size:36px">⚡</span>
+        <h4>Competitive Players</h4>
+        <p>Players who want to compete as much as possible — weekly or bi-weekly formats with rankings, leaderboards, and pathways to bigger events. Our most loyal, highest-engagement users.</p>
+      </div>
+      <div class="te-card">
+        <span style="font-size:36px">🎉</span>
+        <h4>Corporate Fun Events</h4>
+        <p>Team-building formats, mixed-sport days, "office olympics." High spend per head, high frequency. Sold as complete packages including venue, logistics, and post-event celebration.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:48px">
+      <div class="section-tag" style="margin-bottom:20px">Rollout Phases</div>
+      <div class="phases-grid">
+        <div class="phase-card active-phase">
+          <div class="phase-num">Phase 1</div>
+          <div class="phase-name">Launch Ready</div>
+          <div class="phase-metric">5 committed → 20 at launch</div>
+          <div class="phase-desc">Booking platform goes live. Venue partnerships active. First manual tournaments to validate demand and format.</div>
+          <div class="phase-tag green">Now → June 2026</div>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 2</div>
+          <div class="phase-name">Tournament Engine</div>
+          <div class="phase-metric">20–30 grounds · 2–4 events/month</div>
+          <div class="phase-desc">Automate scheduling, draws, scoring & results. Academy leagues and first corporate packages. Recurring tournament calendar established.</div>
+          <div class="phase-tag">Q3–Q4 2026</div>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 3</div>
+          <div class="phase-name">City Scale</div>
+          <div class="phase-metric">50+ grounds · 2 cities</div>
+          <div class="phase-desc">Multi-city tournament circuits. Corporate annual contracts. School grounds pilot. Sponsorship integrations begin.</div>
+          <div class="phase-tag">2027</div>
+        </div>
+        <div class="phase-card">
+          <div class="phase-num">Phase 4</div>
+          <div class="phase-name">National Platform</div>
+          <div class="phase-metric">100+ grounds · 4–5 cities</div>
+          <div class="phase-desc">National amateur sports infrastructure. Cross-city championships. Full school grounds rollout. Licensing and franchise model.</div>
+          <div class="phase-tag">2028+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── INVESTOR ─── -->
 <section id="investor">
   <div class="investor-top-line"></div>
 
   <div style="margin-bottom:72px;" class="reveal">
-    <div class="section-tag">For Investors</div>
+    <div class="section-tag">For Investors &amp; Partners</div>
     <h2 class="section-title">The Market Is Massive.<br/>The Moment Is Now.</h2>
-    <p class="section-sub">India's recreational sports market is underserved, fragmented, and ready to consolidate. We're building the rails.</p>
+    <p class="section-sub">India's recreational sports market is underserved, fragmented, and ready for a tech-first platform. We're building the rails — launching June 2026 with 20+ venue partners.</p>
+  </div>
+
+  <!-- Launch Traction Timeline -->
+  <div class="traction-banner reveal">
+    <div class="traction-label">Launch Readiness — Where We Are</div>
+    <div class="traction-steps">
+      <div class="traction-step ts-done">
+        <div class="ts-dot done"></div>
+        <div class="ts-text">Company Incorporated</div>
+        <div class="ts-date">May 2026</div>
+      </div>
+      <div class="traction-step ts-done">
+        <div class="ts-dot done"></div>
+        <div class="ts-text">5 Ground Owners Committed</div>
+        <div class="ts-date">Now</div>
+      </div>
+      <div class="traction-step">
+        <div class="ts-dot active"></div>
+        <div class="ts-text">20 Grounds at Launch</div>
+        <div class="ts-date">June 2026</div>
+      </div>
+      <div class="traction-step">
+        <div class="ts-dot"></div>
+        <div class="ts-text">Platform Goes Live</div>
+        <div class="ts-date">June 2026</div>
+      </div>
+      <div class="traction-step">
+        <div class="ts-dot"></div>
+        <div class="ts-text">First Tournament</div>
+        <div class="ts-date">Q3 2026</div>
+      </div>
+    </div>
   </div>
 
   <div class="investor-grid">
@@ -1217,8 +1544,8 @@
           <div class="metric-label">Addressable market size</div>
         </div>
         <div class="metric-card">
-          <div class="metric-num">95–97<span style="font-size:18px">%</span></div>
-          <div class="metric-label">Payout to partners — highest in India</div>
+          <div class="metric-num">20<span style="font-size:18px">+</span></div>
+          <div class="metric-label">Venues at launch — 5 committed today</div>
         </div>
         <div class="metric-card">
           <div class="metric-num">NCR</div>
@@ -1226,7 +1553,30 @@
         </div>
       </div>
 
-      <div class="expansion-section reveal" style="transition-delay:0.2s">
+      <!-- Projections -->
+      <div class="projections-card reveal" style="margin-top:20px;transition-delay:0.15s">
+        <div class="section-tag" style="margin-bottom:20px">Revenue Projections</div>
+        <div class="proj-rows">
+          <div class="proj-row">
+            <div class="proj-label">Year 1 <span style="color:var(--muted);font-size:11px">(20–30 grounds, NCR)</span></div>
+            <div class="proj-bar-wrap"><div class="proj-bar" style="width:28%"></div></div>
+            <div class="proj-value">₹30–65L</div>
+          </div>
+          <div class="proj-row">
+            <div class="proj-label">Year 2 <span style="color:var(--muted);font-size:11px">(50+ grounds, 2 cities)</span></div>
+            <div class="proj-bar-wrap"><div class="proj-bar" style="width:55%"></div></div>
+            <div class="proj-value">₹1.5–2.5Cr</div>
+          </div>
+          <div class="proj-row">
+            <div class="proj-label">Year 3 <span style="color:var(--muted);font-size:11px">(100+ grounds, 4 cities)</span></div>
+            <div class="proj-bar-wrap"><div class="proj-bar orange" style="width:88%"></div></div>
+            <div class="proj-value">₹5–8Cr</div>
+          </div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:16px;font-style:italic">Conservative estimates based on current ground commitments and comparable market data. Tournament revenue included from Year 2.</p>
+      </div>
+
+      <div class="expansion-section reveal" style="transition-delay:0.25s">
         <h3>Expansion Roadmap</h3>
         <p>Starting in Delhi NCR, scaling city by city across India.</p>
         <div class="cities-grid">
@@ -1248,44 +1598,79 @@
         <div class="why-card">
           <div class="why-num">01</div>
           <div>
-            <h4>Players First, Always</h4>
-            <p>Every product decision passes one test: does it help a player play sooner, more often, or with better company? If yes, we ship it.</p>
+            <h4>Untapped, Fragmented Market</h4>
+            <p>India has 100M+ recreational athletes and almost no organised booking infrastructure. The market runs on WhatsApp groups and phone calls. GameOn is the first-mover building a tech-first, nationwide solution.</p>
           </div>
         </div>
         <div class="why-card">
           <div class="why-num">02</div>
           <div>
-            <h4>Partners, Not Inventory</h4>
-            <p>We don't squeeze small business owners. 95–97% of every booking goes back to the venue — the highest payout in India. No exclusivity, no hidden fees.</p>
+            <h4>High Partner Loyalty — 95–97% Payout</h4>
+            <p>At 95–97% of every booking, venue partners have almost no reason to leave. Each ground onboarded is a sticky, long-term asset. Our model aligns incentives: we win only when they win.</p>
           </div>
         </div>
         <div class="why-card">
           <div class="why-num">03</div>
           <div>
-            <h4>India-First, Not Imitation</h4>
-            <p>Built for how Indians actually play — with UPI, in Hinglish, on patchy 4G. Not a US sports app pasted over India.</p>
+            <h4>Tournaments = Scalable Revenue Engine</h4>
+            <p>Tournament revenue is high-margin, recurring, and grows with the ground network. At 20–30 grounds we automate the entire workflow and launch structured leagues — creating a self-reinforcing flywheel.</p>
           </div>
         </div>
         <div class="why-card">
           <div class="why-num">04</div>
           <div>
-            <h4>School Grounds Unlock</h4>
-            <p>Our future plan to partner with school grounds after school hours could unlock thousands of hidden venues across every city in India — a supply moat no competitor can easily replicate.</p>
+            <h4>Network Effects + Supply Moat</h4>
+            <p>More grounds → more tournaments → more players → more bookings → more revenue for owners → more grounds join. The school grounds program is a supply moat that would take years to replicate.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">05</div>
+          <div>
+            <h4>Right Timing — India's Sports Boom</h4>
+            <p>Sports participation is at an all-time high. UPI penetration exceeds 90% in urban India. India's youth cohort (35% under 20) is the largest-ever sports consumer base. The infrastructure needs to catch up — right now.</p>
           </div>
         </div>
       </div>
 
-      <div class="raise-card reveal" style="transition-delay:0.3s">
+      <!-- Use of Funds -->
+      <div class="use-of-funds reveal" style="transition-delay:0.25s">
+        <div class="section-tag" style="margin-bottom:20px">Use of Funds</div>
+        <div class="fund-rows">
+          <div class="fund-row">
+            <div class="fund-label">🛠️ Product &amp; Tech</div>
+            <div class="fund-bar-wrap"><div class="fund-bar" style="width:40%"></div></div>
+            <div class="fund-pct">40%</div>
+          </div>
+          <div class="fund-row">
+            <div class="fund-label">📣 Growth &amp; Marketing</div>
+            <div class="fund-bar-wrap"><div class="fund-bar" style="width:25%"></div></div>
+            <div class="fund-pct">25%</div>
+          </div>
+          <div class="fund-row">
+            <div class="fund-label">🤝 Ground Partnerships</div>
+            <div class="fund-bar-wrap"><div class="fund-bar orange" style="width:20%"></div></div>
+            <div class="fund-pct">20%</div>
+          </div>
+          <div class="fund-row">
+            <div class="fund-label">👥 Team &amp; Operations</div>
+            <div class="fund-bar-wrap"><div class="fund-bar" style="width:15%"></div></div>
+            <div class="fund-pct">15%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="raise-card reveal" style="transition-delay:0.35s">
         <h3>We're Actively Raising</h3>
-        <p>GameOn is bootstrapped and pre-product, launching next month. We're looking for funding, grants, and strategic partners who believe in making sports accessible to every Indian.</p>
+        <p>GameOn is bootstrapped, incorporated, and launching next month with 20+ venue partners. We are actively seeking funding, grants, and strategic partners who believe in making sports accessible to every Indian.</p>
         <div class="raise-types">
           <span class="raise-type">Angel Investment</span>
           <span class="raise-type">Seed Round</span>
-          <span class="raise-type">Grants</span>
+          <span class="raise-type">Govt. Grants</span>
           <span class="raise-type">Startup Loans</span>
           <span class="raise-type">Strategic Partners</span>
+          <span class="raise-type">Brand Sponsors</span>
         </div>
-        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:28px;">Talk to Us →</a>
+        <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:28px;">Let's Talk →</a>
       </div>
     </div>
   </div>
